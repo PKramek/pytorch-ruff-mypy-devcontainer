@@ -44,12 +44,12 @@ RUN curl -sSL https://install.python-poetry.org | python${PYTHON_VERSION} -
 # Python and poetry installation
 USER $USER
 ARG HOME="/home/$USER"
-ARG PYTHON_VERSION=3.10
-# ARG PYTHON_VERSION=3.10
+ARG PYTHON_VERSION=3.11
 
 ENV PYENV_ROOT="${HOME}/.pyenv"
 ENV PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${HOME}/.local/bin:$PATH"
 
+ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 RUN echo "done 0" \
     && curl https://pyenv.run | bash \
     && pyenv install ${PYTHON_VERSION} \
