@@ -1,5 +1,5 @@
 {
-	"name": "rank-reductions-experiments",
+	"name": "TODO",
 	"postCreateCommand": ".devcontainer/setup.sh",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"build": {
